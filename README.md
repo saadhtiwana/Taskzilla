@@ -5,7 +5,8 @@
 ## 📌 About Taskzilla
 Taskzilla is a feature-rich task management application that helps users efficiently organize, prioritize, and track their tasks. Whether you're managing personal to-dos or team projects, Taskzilla provides a seamless experience.
 ## 🎥 Preview
-Preview: [Taskzilla Live Demo](p1.jpg)
+<img src="p1.png" alt="Preview" width="500">
+
 
 ## 🚀 Features
 - ✅ Task creation, editing, and deletion
