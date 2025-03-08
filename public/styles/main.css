@@ -1,0 +1,209 @@
+/* Ultra-Premium Todo List Interface */
+:root {
+  --void-black: #0a0a0f;
+  --neo-cyan: #0fffc1;
+  --hologram-purple: #bc13fe;
+  --quantum-silver: rgba(255,255,255,0.9);
+  --depth-shadow: rgba(0,0,0,0.3);
+}
+
+body {
+  background: radial-gradient(circle at 50% 100%, 
+    #1a1a2e 0%, 
+    var(--void-black) 100%);
+  color: var(--quantum-silver);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+  margin: auto;
+}
+
+.box {
+  background: rgba(15, 15, 25, 0.95);
+  backdrop-filter: blur(24px);
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 32px 64px var(--depth-shadow);
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+/* Precision Header */
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, var(--neo-cyan), var(--hologram-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.03em;
+  padding-bottom: 1rem;
+}
+
+header h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    var(--neo-cyan) 0%, 
+    var(--hologram-purple) 100%);
+}
+
+/* Atomic-Level Item Alignment */
+.item {
+  display: grid;
+  grid-template-columns: 30px 1fr 40px 40px;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem;
+  margin: 0.75rem 0;
+  background: rgba(255,255,255,0.03);
+  border-radius: 12px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.item:hover {
+  transform: translateX(8px);
+  background: rgba(11, 179, 154, 0.05);
+}
+
+/* Pixel-Perfect Checkbox */
+input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--neo-cyan);
+  border-radius: 6px;
+  appearance: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked {
+  background: var(--neo-cyan);
+  box-shadow: 0 0 12px rgba(15,255,193,0.3);
+}
+
+/* Typographic Excellence */
+p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--quantum-silver);
+  letter-spacing: -0.01em;
+}
+
+/* Surgical Input Precision */
+input[type="text"] {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255,255,255,0.1);
+  color: white;
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-bottom-color: var(--neo-cyan);
+  outline: none;
+}
+
+/* Quantum Button Design */
+button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: var(--neo-cyan);
+  transform: rotate(8deg) scale(1.1);
+}
+
+.add button {
+  width: auto;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(45deg, 
+    var(--neo-cyan), 
+    var(--hologram-purple));
+  color: var(--void-black);
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* Orbital Footer Positioning */
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(10,10,15,0.9);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Neutron-Star Density Transitions */
+.icon {
+  width: 18px;
+  height: 18px;
+  transition: filter 0.3s ease;
+}
+
+button:hover .icon {
+  filter: invert(1);
+}
+
+/* Gravitational Field Alignment */
+form.item {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(15, 179, 154, 0.05);
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .item {
+    grid-template-columns: 25px 1fr 35px 35px;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+}
